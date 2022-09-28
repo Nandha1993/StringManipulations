@@ -1,5 +1,9 @@
 public class LongestPalindrome {
-
+    /**
+     * This way of solving problem using two pointer technique
+     * saves auxilary space, whereas DP method uses DP array which results space complexity O(n2)
+     * @param input
+     */
     private static void getLongestPalindrome(String input) {
 
         int maxLength=1;
@@ -14,7 +18,7 @@ public class LongestPalindrome {
                 high++; //3
             }
 
-            while(low>=0 && input.charAt(low) == input.charAt(i)) { //low<0 , g!=e, 
+            while(low>=0 && input.charAt(low) == input.charAt(i)) { //low<0 , g!=e,
                 low--;
             }
 
